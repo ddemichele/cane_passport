@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="setupApp">
+<head>
+    <meta charset="utf8">
+    <base href="/">
+    <title>Cloudant-Angular-Nodejs-Express (CANE)</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap_custom.css">
+
+
+</head>
+<body>
+<div class="container">
+    <div ng-controller="SetupCtrl" class="row">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron" ng-show="setup_done">
+                    <h2>Initializing Cloudant for the Passport Example</h2>
+                    <h4>A Cloudant Database was created: <mark>{{dbname}}</mark></h4>
+                    <h4>A Cloudant Admin user and password were created: <mark>{{admin_user}}/{{admin_pass}}</mark></h4>
+                    <h4>A Cloudant Query Index was created on the field: <mark>{{index_field}}</mark></h4>
+                </div>
+                <div class="jumbotron" ng-show="setup_started" ng-init="setup_started=true">
+                    <h2>Initializing Cloudant....</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Subscribe to all flash messages. -->
+<div flash-alert active-class="in" class="alert fade col-md-10 col-md-offset-1">
+    <strong class="alert-heading">Message: </strong>
+    <span class="alert-message">{{flash.message}}</span>
+</div>
+
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-flash/dist/angular-flash.js"></script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+</body>
+</html>

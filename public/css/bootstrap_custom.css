@@ -1,0 +1,13 @@
+
+.navbar-brand {
+    height: 80px;
+}
+
+.navbar-nav > li > a {
+  padding-top: 45px;
+}
+
+.welcome {
+  padding-top: 45px;
+  padding-left: 50px;
+}
